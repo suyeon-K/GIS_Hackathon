@@ -44,6 +44,17 @@ def load_checkpoints(config_path, checkpoint_path, cpu=False):
     generator.load_state_dict(checkpoint['generator'])
     kp_detector.load_state_dict(checkpoint['kp_detector'])
     
+    # print("type(checkpoint['generator']) : ",type(checkpoint['generator']))
+    # print("type(checkpoint['kp_detector']) : ",type(checkpoint['kp_detector']))
+
+    # print()
+    # print("checkpoint['generator'] : ",checkpoint['generator'].shape)
+    # print("checkpoint['kp_detector'] : ",checkpoint['kp_detector'].shape)
+
+    # print()
+    # print("checkpoint['generator'] : ",checkpoint['generator'])
+    # print("checkpoint['kp_detector'] : ",checkpoint['kp_detector'])
+    
     if not cpu:
         generator = DataParallelWithCallback(generator)
         kp_detector = DataParallelWithCallback(kp_detector)
