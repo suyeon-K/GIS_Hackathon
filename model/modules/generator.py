@@ -13,8 +13,10 @@ class OcclusionAwareGenerator(nn.Module):
 
     def __init__(self, num_channels, num_kp, block_expansion, max_features, num_down_blocks,
                  num_bottleneck_blocks, estimate_occlusion_map=False, dense_motion_params=None, estimate_jacobian=False):
-        print("Generater parms : ",num_channels, num_kp, block_expansion, max_features, num_down_blocks,
-                 num_bottleneck_blocks, estimate_occlusion_map, dense_motion_params, estimate_jacobian)
+        
+        # print("Generater parms : ",num_channels, num_kp, block_expansion, max_features, num_down_blocks,
+        #          num_bottleneck_blocks, estimate_occlusion_map, dense_motion_params, estimate_jacobian)
+        
         super(OcclusionAwareGenerator, self).__init__()
 
         if dense_motion_params is not None:

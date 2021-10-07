@@ -26,8 +26,15 @@ def load_checkpoints(config_path, checkpoint_path, cpu=False):
     with open(config_path) as f:
         config = yaml.load(f)
 
-    generator = OcclusionAwareGenerator(**config['model_params']['generator_params'],
-                                        **config['model_params']['common_params'])
+    vox_generator_params = [3, 10, 64, 512, 2, 6, True, {'block_expansion': 64, 'max_features': 1024, 'num_blocks': 5, 'scale_factor': 0.25}]
+    vox_common_params = [32, 10, 3, 1024, 5, 0.1, True, 0.25, False, 0]
+    generator = OcclusionAwareGenerator(*vox_generator_params,
+                                        *vox_common_params)
+    
+    # 수정 전
+    # generator = OcclusionAwareGenerator(**config['model_params']['generator_params'],
+    #                                     **config['model_params']['common_params'])
+
     if not cpu:
         generator.cuda()
 

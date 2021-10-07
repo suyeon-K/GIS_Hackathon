@@ -12,9 +12,10 @@ class KPDetector(nn.Module):
     def __init__(self, block_expansion, num_kp, num_channels, max_features,
                  num_blocks, temperature, estimate_jacobian=False, scale_factor=1,
                  single_jacobian_map=False, pad=0):
-        print("Keypoint_detector params : ",block_expansion, num_kp, num_channels, max_features,
-                 num_blocks, temperature, estimate_jacobian=False, scale_factor=1,
-                 single_jacobian_map=False, pad=0)
+
+        # print("Keypoint_detector params : ",block_expansion, num_kp, num_channels, max_features,
+        #          num_blocks, temperature, estimate_jacobian, scale_factor,single_jacobian_map, pad)
+
         super(KPDetector, self).__init__()
 
         self.predictor = Hourglass(block_expansion, in_features=num_channels,
