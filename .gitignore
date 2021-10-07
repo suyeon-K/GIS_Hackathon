@@ -1,7 +1,6 @@
 .env
 db.sqlite3
 /model/checkpoint
-model/main.ipynb
 model/main2.ipynb
 model/main3.py
 model/main.ipynb
