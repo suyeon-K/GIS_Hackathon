@@ -5,12 +5,17 @@ body {
   color: #35465d;
 }
 .file-upload {
-    padding: 15% 3%;
+    padding: 13% 7%;
     margin: 0 auto;
     border-radius: 10px;
     border: solid 1.5px #f6f7fa;
     background-color: #f6f7fa;
 }
+
+.result_video{
+
+}
+
 .file-upload-btn {
   width: 100%;
   margin: 0;
@@ -88,10 +93,10 @@ body {
 }
 
 .file-upload-image {
-  max-height: 60%;
-  max-width: 60%;
+  max-height: 40%;
+  max-width: 40%;
   margin: auto;
-  padding: 10px;
+  padding: 8px;
 }
 
 .try-again-btn {
